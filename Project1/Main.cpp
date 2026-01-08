@@ -8,5 +8,4 @@ int main()
 	int c = (Add(a, b));
 	std::cout << c << std::endl;
 	Log("Hello, testing 123");
-	getchar();
 }
