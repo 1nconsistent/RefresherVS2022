@@ -5,6 +5,11 @@ void Log(const char*);
 void InitLog();
 float Multiply(float, float);
 
+int Divide(int da, int db)
+{
+	return da / db;
+}
+
 int main()
 {
 	float a;
@@ -16,5 +21,10 @@ int main()
 	a = 12.5;
 	c = Multiply(a, b);
 	std::cout << c << std::endl;
+	Log("Divide now you idiot");
+	int d1, d2;
+	std::cin >> d1 >> d2;
+	int Div = Divide(d1, d2);
+	std::cout << "Div: " << Div << std::endl;
 	Log("Hello, testing 123");
 }
