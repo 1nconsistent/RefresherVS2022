@@ -2,11 +2,13 @@
 #include "Log.h"
 
 void Log(const char*);
+void InitLog();
 int Multiply(int, int);
 
 int main()
 {
 	int a, b;
+	InitLog();
 	std::cin >> a >> b;
 	int c = (Multiply(a, b));
 	std::cout << c << std::endl;
