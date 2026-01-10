@@ -20,7 +20,7 @@ int main()
 	a = 12.5;
 	c = Multiply(a, b);
 	std::cout << c << std::endl;
-	Log("Divide now you idiot");	//Breakpoint
+	Log("Divide now you idiot");	//Breakpoint2
 	int d1, d2;
 	std::cin >> d1 >> d2;
 	int Div = Divide(d1, d2);
