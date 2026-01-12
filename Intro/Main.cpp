@@ -27,10 +27,13 @@ int main()
 	std::cout << "Div: " << Div << std::endl;
 	Log("Hello, testing 123");
 	
-	int ad = 532436;
-	int* p = &ad;
+	int ad[] = { 5,3,2,4,3,6 };
+	std::cout << "Array of Numbers: " << std::endl;
+	for (int i = 0; i < 6; i++)
+	{
+		std::cout << ad[i] << std::endl;
+	}
 	const char* aag = "Quadratini";
-	std::cout << *p << std::endl;
 	for (int i = 0; i < 10; i++)
 	{
 			std::cout << aag[i] << std::endl;
