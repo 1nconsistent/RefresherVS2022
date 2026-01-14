@@ -1,49 +1,47 @@
 #include <iostream>
 #include "Log.h"
+#include "MathCustom.h"
 
 void InitLog();
 float Multiply(float, float);
 
-int Divide(int da, int db)
-{
-	return da / db;
-}
-
 int main()
 {
 	int condi;
+	char asd = 'Y';
 	float a, b;
 	InitLog();
-	std::cout << "\nDo you want to multiply(1) or divide(2)?" << std::endl;
-	std::cin >> condi;
-	if (condi == 1)
+	do
 	{
-		Log("Give 2 numbers to multiply");
-		std::cin >> a >> b;
-		float c = (Multiply(a, b)); //Breakpoint1
-		std::cout << "Value: " << c << std::endl;
-	}
-	else if (condi == 2)
-	{
-		Log("Give 2 numbers to divide");	//Breakpoint2
-		int d1, d2;
-		std::cin >> d1 >> d2;
-		int Div = Divide(d1, d2);
-		std::cout << "Div: " << Div << std::endl;
-	}
-	else
-	{
-		Log("Invalid option \n Here's a random output:");
-		int ad[] = { 5,3,2,4,3,6 };
-		std::cout << "Array of Numbers: " << std::endl;
-		for (int i = 0; i < 6; i++)
+		std::cout << "Select an operation:\n1. Multiply\n2. Divide\n3. Add\n4. Subtract\n5. Modulus\n6. Exit\n";
+		std::cin >> condi;
+		if (condi >= 1 && condi <= 5)
 		{
-			std::cout << ad[i] << std::endl;
+			std::cout << "Enter two numbers: ";
+			std::cin >> a >> b;
+			switch (condi)
+			{
+			case 1:
+				std::cout << "Product: " << Multiply(a, b) << std::endl;
+				break;
+			case 2:
+				std::cout << "Quotient: " << Divide(a, b) << std::endl;
+				break;
+			case 3:
+				std::cout << "Sum: " << Add(a, b) << std::endl;
+				break;
+			case 4:
+				std::cout << "Difference: " << Subtract(a, b) << std::endl;
+				break;
+			case 5:
+				std::cout << "Remainder: " << Modulus(a, b) << std::endl;
+				break;
+			}
 		}
-		const char* aag = "Quadratini";
-		for (int i = 0; i < 10; i++)
+		else
 		{
-			std::cout << aag[i] << std::endl;
+			std::cout << "Exiting program" << std::endl;
+			break;
 		}
-	}
+	} while (condi != 6);
 }
