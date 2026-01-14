@@ -5,7 +5,6 @@
 int main()
 {
 	int condi;
-	char asd = 'Y';
 	float a, b;
 	do
 	{
