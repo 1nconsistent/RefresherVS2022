@@ -69,3 +69,5 @@ int main()
 		}
 	} while (condi != 6);
 }
+
+//refresher done about classes
